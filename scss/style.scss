@@ -199,12 +199,18 @@ footer {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(15, 5vw);
   grid-gap: 5px;
+  background-color: lightgray;
   //padding: 5rem;
+
+  figcaption {
+    margin-top: 0.5rem;
+  }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 10px 10px 5px rgba(26, 25, 25, 0.719);
   }
 
   .gallery_item_1 {
@@ -305,6 +311,49 @@ footer {
 
   img {
     max-width: 50%;
+  }
+}
+
+.steps {
+  clear: both;
+  list-style: none;
+  padding-left: 4rem;
+  li {
+    padding-left: 3rem;
+    padding-right: 4rem;
+    margin: 2em 0;
+    padding-top: 1em;
+    display: block;
+    position: relative;
+    counter-increment: inst;
+  }
+
+  li::before {
+    content: counter(inst);
+
+    background: rgba(255, 0, 0, 0.35);
+    color: black;
+
+    font-size: 1em;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 1px 1px rgba(255, 150, 0, 0.5);
+
+    border-radius: 0 0.675em 0.675em 0;
+    font-size: 1.5em;
+    text-align: center;
+
+    padding-top: 0;
+    padding-left: 2.25%;
+    left: -5%;
+    top: -0.65em;
+    height: 1.35em;
+    width: 1.35em;
+    position: absolute;
+
+    transition: all 0.2s ease-in-out;
+
+    z-index: -1;
   }
 }
 
