@@ -8,6 +8,13 @@
     font-size: 1.5rem;
   }
 
+  .main-nav {
+    ul {
+      padding-inline-start: 10px;
+      white-space: nowrap;
+    }
+  }
+
   .portfolio-item {
     position: relative;
     &-text {
