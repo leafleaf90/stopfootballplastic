@@ -7,5 +7,6 @@
       "savePath": "/css"
     }
   ],
-  "liveSassCompile.settings.generateMap": false
+  "liveSassCompile.settings.generateMap": false,
+  "liveServer.settings.port": 5501
 }
