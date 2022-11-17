@@ -2499,7 +2499,7 @@ p {
 
 .info-card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
 }
 
@@ -2514,6 +2514,7 @@ p {
   );
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  max-width: 95vw;
 }
 
 .section-container {
@@ -2525,6 +2526,12 @@ p {
 }
 
 .main-section-container {
+}
+
+@media only screen and (min-width: 600px) {
+  .info-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .hover\:scale-125:hover {
