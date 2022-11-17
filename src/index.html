@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Stop Football Plastic</title>
+  </head>
+  <body class="font-sans">
+    <div
+      id="overlay"
+      onclick="closeVideoModal()"
+      class="hidden fixed top-0 bottom-0 left-0 right-0 justify-center content-center z-[60] bg-black opacity-90"
+    ></div>
+    <div
+      id="videomodal"
+      class="fixed w-screen h-screen hidden justify-center content-center z-[70]"
+    >
+      <div class="flex flex-col justify-center content-center w-[80%]">
+        <button onclick="closeVideoModal()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 mb-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+            stroke-width="3"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <iframe
+          class="w-[100%] aspect-video"
+          src="https://player.vimeo.com/video/771925202?h=fc731dd2f4"
+        ></iframe>
+      </div>
+    </div>
+    <header
+      class="relative flex items-center justify-center h-screen overflow-hidden"
+    >
+      <video
+        autoplay
+        loop
+        muted
+        class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+      >
+        <source src="./assets/ocean.m4v" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div
+        style="z-index: 20"
+        class="mx-4 flex flex-col justify-center items-center text-center"
+      >
+        <h1
+          class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl text-white"
+        >
+          WE ARE KILLING OUR OCEANS.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-white sm:text-center font-bold">
+          THE WORLD OF FOOTBALL NEEDS TO DO BETTER. IT STARTS HERE.
+        </p>
+        <div class="flex">
+          <button
+            style="width: fit-content"
+            class="text-white p-4 mt-6 border-white border-2 flex mr-6 hover:scale-125 duration-200"
+            onclick="openVideoModal()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+              />
+            </svg>
+            SEE WHY
+          </button>
+          <button
+            style="background-color: #44abe0; width: fit-content"
+            class="text-white p-4 mt-6 border-[#44abe0] hover:scale-125 duration-200"
+          >
+            <a href="#individuals">START TODAY</a>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="max-w-4xl flex align-center justify-center">
+      <div
+        class="navbar flex align-center justify-center w-full px-6 py-2 font-bold text-black"
+      >
+        <div class="w-full flex justify-between">
+          <img
+            class="md:max-w-[200px] max-w-[100px] mr-6"
+            src="./assets/logo.png"
+            alt=""
+          />
+          <div class="flex align-center items-center text-[#0a4051]">
+            <a
+              href="#individuals"
+              class="mr-6 border-solid hover:border-b-2 border-white"
+              >INDIVIDUALS</a
+            >
+            <a href="#teams" class="border-solid hover:border-b-2 border-white"
+              >TEAMS</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w-full border-y-8 border-[#0a4051] border-solid bg-[#44abe0] text-2xl text-[#0a4051] font-bold text-center py-6 flex flex-col items-center"
+    >
+      <div id="individuals" class="main-section-container">
+        <div class="section-container transparent-light-bg">
+          <h2 class="flex justify-center items-center">
+            <span class="mr-2">INDIVIDUALS</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+          </h2>
+          <div class="flex flex-col items-center justify-center m-4">
+            <div class="max-w-4xl info-card-container">
+              <div class="flex text-start info-card dark-bg-texture">
+                <div class="mr-2 text-base">
+                  <img
+                    style="width: 25px"
+                    src="./assets/stainless-bottle.svg"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="text-base">
+                    Make sure you have a refillable bottle
+                  </h3>
+                  <p class="text-sm">Carry it with you always.</p>
+                </div>
+              </div>
+              <div class="flex text-start info-card dark-bg-texture">
+                <div class="mr-2 text-base">
+                  <img src="./assets/drop.svg" alt="" />
+                </div>
+                <div>
+                  <h3 class="text-base">Refill your bottle</h3>
+                  <p class="text-sm">
+                    Please check the refill points in Bangkok below. Help us add
+                    more refill stations by contacting us
+                    <a class="underline" href="mailto:mail@viktorlovgren.com"
+                      >here</a
+                    >.
+                  </p>
+                </div>
+              </div>
+              <div class="flex text-start info-card dark-bg-texture">
+                <div class="mr-2 text-base">
+                  <img src="./assets/logo.png" alt="" />
+                </div>
+                <div>
+                  <h3 class="text-base">Inspire others</h3>
+                  <p class="text-sm">
+                    Share your thoughts online. Talk to your club and check if
+                    they're open massively reducing their plastic footprint by
+                    joining Stop Football Plastic!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3 class="mt-4">Bangkok water refill stations:</h3>
+      <div
+        id="map"
+        class="w-full mt-4"
+        style="height: 900px; max-height: 80vh; max-width: 80vw"
+      ></div>
+    </div>
+
+    <div
+      id="teams"
+      class="main-section-container w-full border-b-8 bg-[#0a4051] border-solid border-[#44abe0] text-2xl text-[#44abe0] font-bold text-center py-6 flex flex-col items-center"
+    >
+      <div class="transparent-light-bg section-container">
+        <h2 class="flex justify-center items-center text-[#0a4051]">
+          <span class="mr-2">TEAMS</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+            />
+          </svg>
+        </h2>
+        <div class="flex flex-col items-center justify-center m-4">
+          <div class="max-w-4xl info-card-container">
+            <div class="flex text-start info-card light-bg-texture">
+              <div class="mr-2 text-base">
+                <img src="./assets/stainless-bottle.svg" alt="" />
+              </div>
+              <div>
+                <h3 class="text-base">
+                  Make sure all players have refillable bottles
+                </h3>
+                <p class="text-sm">In training and away game travels.</p>
+              </div>
+            </div>
+            <div class="flex text-start info-card light-bg-texture">
+              <div class="mr-2 text-base">
+                <img src="./assets/drop.svg" alt="" />
+              </div>
+              <div>
+                <h3 class="text-base">Set up refill stations at the arena</h3>
+                <p class="text-sm">
+                  For easy refills during training, make sure you have a
+                  solution that works for your club.
+                </p>
+              </div>
+            </div>
+            <div class="flex text-start info-card light-bg-texture">
+              <div class="mr-2 text-base">
+                <img src="./assets/logo.png" alt="" />
+              </div>
+              <div>
+                <h3 class="text-base">Inspire other clubs</h3>
+                <p class="text-sm">
+                  Get in contact to show us your plastic-free setup and we will
+                  calculate your impact and give you the Stop Football Plastic
+                  Badge for use on your website and social media to inspire
+                  others!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="items-center justify-center flex h-[100px]">
+      <p>&copy; Stop Football Plastic 2022</p>
+    </div>
+
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoic3RhcmJvYXJkZGV2IiwiYSI6ImNrYTB4c3JjZjA2ZXczbW4ycmc4a3huNDIifQ.GY1Rj4kD_AwiZEM3fM-8TA";
+      const map = new mapboxgl.Map({
+        container: "map", // container ID
+        style: "mapbox://styles/starboarddev/clakmgvb2000315mbc9pqly89", // style URL
+        center: [100.49, 13.75], // starting position [lng, lat]
+        zoom: 12, // starting zoom
+        projection: "globe", // display the map as a 3D globe
+      });
+      /* 
+Add an event listener that runs
+  when a user clicks on the map element.
+*/
+      map.on("click", (event) => {
+        // If the user clicked on one of your markers, get its information.
+        const features = map.queryRenderedFeatures(event.point, {
+          layers: ["bangkok-water-refill"], // replace with your layer name
+        });
+        if (!features.length) {
+          return;
+        }
+        const feature = features[0];
+
+        /* 
+    Create a popup, specify its options 
+    and properties, and add it to the map.
+  */
+        const popup = new mapboxgl.Popup({ offset: [0, -15] })
+          .setLngLat(feature.geometry.coordinates)
+          .setHTML(
+            `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+          )
+          .addTo(map);
+      });
+
+      const videoModal = document.querySelector("#videomodal");
+      const overlay = document.querySelector("#overlay");
+      const closeVideoModal = () => {
+        videoModal.style.display = "none";
+        overlay.style.display = "none";
+      };
+      const openVideoModal = () => {
+        videoModal.style.display = "flex";
+        overlay.style.display = "flex";
+      };
+    </script>
+  </body>
+</html>
